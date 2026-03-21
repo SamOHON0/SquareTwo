@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Square Two — The Next Step for New Irish Businesses</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0052FF;--blue-dk:#003ECC;--blue-lt:#EBF1FF;--ink:#080D1A;--mid:#4A5468;--soft:#9BA5BB;--white:#FFFFFF;--off:#F4F6FB;--border:#E2E7F0;--max:1120px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 2.5rem}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border)}
+.nav-i{max-width:var(--max);margin:0 auto;padding:0 2.5rem;height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
+.logo b{color:var(--blue)}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:.875rem;color:var(--mid);transition:color .2s}
+.nav-links a:hover{color:var(--ink)}
+.nav-btn{background:var(--blue);color:#fff!important;padding:.55rem 1.4rem;border-radius:3px;font-weight:500!important;transition:background .2s}
+.nav-btn:hover{background:var(--blue-dk)!important}
+
+/* HERO */
+.hero{padding:130px 0 0;overflow:hidden;background:var(--white)}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;position:relative}
+.hero-inner::before{content:'2';position:absolute;right:-60px;top:-80px;font-family:'Fraunces',serif;font-weight:700;font-size:28rem;color:var(--off);line-height:1;pointer-events:none;z-index:0;letter-spacing:-.05em}
+.hero-left{position:relative;z-index:1}
+.hero-kicker{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:1.6rem;background:var(--blue-lt);padding:.35rem .9rem;border-radius:100px}
+.hero-kicker::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%}
+h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2.8rem,4.8vw,5rem);line-height:1.05;letter-spacing:-.02em;color:var(--ink);margin-bottom:1.6rem}
+h1 em{font-style:italic;color:var(--blue)}
+.hero-sub{font-size:1.05rem;color:var(--mid);line-height:1.8;font-weight:300;max-width:440px;margin-bottom:2.5rem}
+.hero-sub strong{color:var(--ink);font-weight:500}
+.hero-actions{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:500;text-decoration:none;transition:all .2s}
+.btn-blue{background:var(--blue);color:#fff;padding:.85rem 2rem;border-radius:3px}
+.btn-blue:hover{background:var(--blue-dk);box-shadow:0 6px 20px rgba(0,82,255,.25);transform:translateY(-1px)}
+.btn-ghost{color:var(--mid);font-size:.875rem;font-weight:400;padding:.85rem 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.btn-ghost:hover{color:var(--blue);border-bottom-color:var(--blue)}
+.hero-right{position:relative;z-index:1}
+.hero-card{background:var(--white);border:1px solid var(--border);border-radius:6px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.07)}
+.hero-card-head{background:var(--blue);padding:1.2rem 1.6rem}
+.hero-card-head p{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+.hero-card-head h3{font-family:'Fraunces',serif;font-weight:300;font-size:1.1rem;color:#fff;margin-top:.2rem}
+.hc-list{display:flex;flex-direction:column;gap:1px;background:var(--border)}
+.hc-row{background:var(--white);padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;transition:background .2s}
+.hc-row:hover{background:var(--off)}
+.hc-info strong{display:block;font-size:.875rem;font-weight:500;color:var(--ink);margin-bottom:.1rem}
+.hc-info span{font-size:.75rem;color:var(--soft);font-weight:300}
+.hc-tick{width:22px;height:22px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.hc-tick svg{width:10px;height:10px;stroke:#fff;stroke-width:2.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* MARQUEE */
+.marquee{background:var(--blue);padding:.85rem 0;overflow:hidden;white-space:nowrap;margin-top:5rem}
+.marquee-inner{display:inline-flex;animation:mq 30s linear infinite;gap:3rem}
+.mi{font-size:.72rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:1.5rem}
+.mi::after{content:'·';color:rgba(255,255,255,.3);font-size:.9rem}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* STATEMENT */
+.statement{padding:7rem 0;background:var(--white)}
+.statement-inner{display:grid;grid-template-columns:1fr 1fr;gap:8rem;align-items:center}
+.statement-num{font-family:'Fraunces',serif;font-weight:700;font-size:7rem;color:var(--off);line-height:1;letter-spacing:-.05em;margin-bottom:-1.5rem}
+.statement-left h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2rem,3vw,3rem);letter-spacing:-.02em;color:var(--ink);line-height:1.15;position:relative;z-index:1}
+.statement-left h2 em{font-style:italic;color:var(--blue)}
+.statement-right p{font-size:1rem;color:var(--mid);line-height:1.85;font-weight:300;margin-bottom:1.2rem}
+.statement-right p strong{color:var(--ink);font-weight:500}
+.statement-right p:last-of-type{margin-bottom:0}
+
+/* COMMONS */
+.section{padding:7rem 0}
+.label{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:.8rem}
+.label::before{content:'';width:12px;height:2px;background:var(--blue)}
+.sh{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.9rem,2.8vw,2.8rem);letter-spacing:-.02em;color:var(--ink);line-height:1.15}
+.sh em{font-style:italic;color:var(--blue)}
+.sec-head{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:3rem}
+.sec-head p{font-size:.975rem;color:var(--mid);line-height:1.8;font-weight:300}
+
+/* SERVICES */
+.services{padding:0 0 7rem;background:var(--white)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.svc{background:var(--white);padding:2.2rem;position:relative;transition:background .25s}
+.svc:hover{background:var(--off)}
+.svc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.svc:hover::before{transform:scaleX(1)}
+.svc-n{font-size:.65rem;font-weight:700;letter-spacing:.18em;color:var(--blue);margin-bottom:.8rem;opacity:.6}
+.svc-t{font-family:'Fraunces',serif;font-weight:600;font-size:.975rem;color:var(--ink);margin-bottom:.55rem}
+.svc-d{font-size:.84rem;color:var(--mid);line-height:1.7;font-weight:300}
+
+/* PROCESS */
+.process{background:var(--off);padding:7rem 0}
+.proc-head{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:end;margin-bottom:4rem}
+.proc-head p{font-size:.975rem;color:var(--mid);line-height:1.8;font-weight:300}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.step{background:var(--white);padding:2rem 1.8rem;transition:background .25s;cursor:default}
+.step:hover{background:var(--blue)}
+.step-n{font-family:'Fraunces',serif;font-weight:300;font-size:3rem;color:var(--border);line-height:1;margin-bottom:1.2rem;transition:color .25s}
+.step:hover .step-n{color:rgba(255,255,255,.2)}
+.step h3{font-family:'Fraunces',serif;font-weight:600;font-size:.9rem;color:var(--ink);margin-bottom:.5rem;transition:color .25s}
+.step:hover h3{color:#fff}
+.step p{font-size:.82rem;color:var(--mid);line-height:1.65;font-weight:300;transition:color .25s}
+.step:hover p{color:rgba(255,255,255,.75)}
+
+/* PRICING */
+.pricing{padding:7rem 0;background:var(--white)}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.plan{border:1px solid var(--border);border-radius:6px;padding:2.4rem;position:relative;transition:box-shadow .3s,transform .3s;background:var(--white)}
+.plan:hover{box-shadow:0 16px 48px rgba(0,82,255,.08);transform:translateY(-3px)}
+.plan.best{border-color:var(--blue);background:var(--blue)}
+.plan-badge{position:absolute;top:-1px;right:1.8rem;background:#FFD600;color:var(--ink);font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .8rem;border-radius:0 0 4px 4px}
+.plan-tier{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:1.1rem}
+.plan.best .plan-tier{color:rgba(255,255,255,.6)}
+.plan-monthly{font-family:'Fraunces',serif;font-weight:300;font-size:3.2rem;color:var(--ink);line-height:1;letter-spacing:-.02em;margin-bottom:.15rem}
+.plan.best .plan-monthly{color:#fff}
+.plan-monthly-label{font-size:.75rem;color:var(--soft);font-weight:400;margin-bottom:.5rem}
+.plan.best .plan-monthly-label{color:rgba(255,255,255,.5)}
+.plan-onceof{font-size:.8rem;color:var(--soft);font-weight:300;margin-bottom:2rem;padding:.5rem .75rem;background:var(--off);border-radius:3px;display:inline-block}
+.plan.best .plan-onceof{background:rgba(255,255,255,.12);color:rgba(255,255,255,.65)}
+.plan-rule{height:1px;background:var(--border);margin-bottom:1.5rem}
+.plan.best .plan-rule{background:rgba(255,255,255,.15)}
+.plan-feats{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem}
+.plan-feats li{display:flex;align-items:flex-start;gap:.65rem;font-size:.855rem;color:var(--mid);font-weight:300;line-height:1.4}
+.plan.best .plan-feats li{color:rgba(255,255,255,.8)}
+.plan-feats li::before{content:'✓';font-size:.65rem;font-weight:700;color:var(--blue);flex-shrink:0;margin-top:.15rem;width:16px;height:16px;background:var(--blue-lt);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.plan.best .plan-feats li::before{background:rgba(255,255,255,.15);color:#fff}
+.plan-cta{display:block;text-align:center;padding:.85rem;border-radius:3px;font-size:.875rem;font-weight:500;text-decoration:none;border:1.5px solid var(--blue);color:var(--blue);transition:all .2s;font-family:'DM Sans',sans-serif}
+.plan-cta:hover{background:var(--blue);color:#fff}
+.plan.best .plan-cta{background:#fff;border-color:#fff;color:var(--blue)}
+.plan.best .plan-cta:hover{background:#FFD600;border-color:#FFD600;color:var(--ink)}
+
+/* FAQ */
+.faq{background:var(--off);padding:7rem 0}
+.faq-inner{display:grid;grid-template-columns:320px 1fr;gap:6rem;align-items:start}
+.faq-left{position:sticky;top:82px}
+.faq-left p{font-size:.925rem;color:var(--mid);line-height:1.8;font-weight:300;margin-top:1rem}
+.faq-list{display:flex;flex-direction:column;border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.faq-item{background:var(--white);border-bottom:1px solid var(--border)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{width:100%;padding:1.3rem 1.6rem;display:flex;align-items:center;justify-content:space-between;background:none;border:none;text-align:left;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:500;color:var(--ink);cursor:pointer;gap:1rem;transition:background .2s}
+.faq-q:hover{background:var(--off)}
+.faq-ic{width:22px;height:22px;border-radius:50%;background:var(--blue-lt);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:300;flex-shrink:0;transition:all .25s;line-height:1}
+.faq-item.open .faq-ic{transform:rotate(45deg);background:var(--blue);color:#fff}
+.faq-a{display:none;padding:0 1.6rem 1.3rem;font-size:.855rem;color:var(--mid);line-height:1.75;font-weight:300}
+.faq-item.open .faq-a{display:block}
+
+/* CONTACT */
+.contact{padding:7rem 0;background:var(--white)}
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
+.contact-left h2{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2rem,2.8vw,2.8rem);letter-spacing:-.02em;color:var(--ink);line-height:1.15;margin-bottom:1.2rem}
+.contact-left h2 em{font-style:italic;color:var(--blue)}
+.contact-left>p{font-size:.95rem;color:var(--mid);line-height:1.8;font-weight:300;margin-bottom:2rem}
+.contact-deets{display:flex;flex-direction:column;gap:.8rem}
+.cd{display:flex;align-items:center;gap:.75rem}
+.cd-ic{width:32px;height:32px;background:var(--blue-lt);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:.8rem;flex-shrink:0}
+.cd span{font-size:.875rem;color:var(--mid);font-weight:300}
+.cd a{color:var(--blue);text-decoration:none;transition:color .2s}
+.cd a:hover{color:var(--blue-dk)}
+.contact-form{background:var(--off);border:1px solid var(--border);border-radius:6px;padding:2.4rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.fg{display:flex;flex-direction:column;gap:.35rem;margin-bottom:1rem}
+.fg label{font-size:.72rem;font-weight:600;color:var(--mid);letter-spacing:.07em;text-transform:uppercase}
+.fg input,.fg select,.fg textarea{background:#fff;border:1px solid var(--border);border-radius:3px;padding:.7rem .9rem;font-family:'DM Sans',sans-serif;font-size:.875rem;color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none}
+.fg input::placeholder,.fg textarea::placeholder{color:var(--soft)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,82,255,.08)}
+.fg select option{background:#fff;color:var(--ink)}
+.fg textarea{resize:vertical;min-height:100px}
+.btn-sub{width:100%;background:var(--blue);color:#fff;padding:.88rem;border-radius:3px;font-family:'DM Sans',sans-serif;font-size:.9rem;font-weight:500;border:none;cursor:pointer;transition:background .2s;margin-top:.4rem}
+.btn-sub:hover{background:var(--blue-dk)}
+
+/* FOOTER */
+footer{background:var(--ink);padding:4rem 0 2rem}
+.ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:2rem}
+.ft-logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.2rem;letter-spacing:-.02em;color:#fff;display:block;margin-bottom:.7rem;text-decoration:none}
+.ft-logo b{color:var(--blue)}
+.ft-tag{font-size:.82rem;color:rgba(255,255,255,.28);line-height:1.65;font-weight:300;max-width:220px}
+.ft-col h4{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:1.1rem}
+.ft-col ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+.ft-col ul li a{text-decoration:none;font-size:.855rem;color:rgba(255,255,255,.4);transition:color .2s;font-weight:300}
+.ft-col ul li a:hover{color:#fff}
+.ft-bot{display:flex;justify-content:space-between;align-items:center}
+.ft-bot p,.ft-bot span{font-size:.75rem;color:rgba(255,255,255,.18)}
+
+.r{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease}
+.r.v{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+@media(max-width:960px){
+  .nav-links{display:none}
+  .wrap{padding:0 1.5rem}
+  .hero{padding:100px 0 0}
+  .hero-inner{grid-template-columns:1fr;gap:3rem}
+  .hero-inner::before{display:none}
+  .statement-inner,.contact-inner{grid-template-columns:1fr;gap:3rem}
+  .sec-head,.proc-head{grid-template-columns:1fr;gap:1.5rem}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .plans{grid-template-columns:1fr;max-width:380px}
+  .faq-inner{grid-template-columns:1fr;gap:2.5rem}
+  .faq-left{position:static}
+  .ft-top{grid-template-columns:1fr 1fr;gap:2rem}
+  .ft-bot{flex-direction:column;gap:.5rem;text-align:center}
+}
+@media(max-width:580px){
+  .svc-grid,.steps{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .ft-top{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-i">
+    <a href="#" class="logo">Square<b>&nbsp;Two</b></a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact" class="nav-btn">Get Started</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-kicker r">Irish-owned · Based in Ireland</div>
+        <h1 class="r d1">You started<br>your business.<br><em>That took courage.</em><br>Now let's get<br>it online.</h1>
+        <p class="hero-sub r d2">Square one is done — you've had the idea, taken the leap, and incorporated. <strong>We handle everything that comes next.</strong> Website, domain, email, Google — all of it, fast.</p>
+        <div class="hero-actions r d3">
+          <a href="#contact" class="btn btn-blue">Let's Get Started →</a>
+          <a href="#about" class="btn btn-ghost">How we work</a>
+        </div>
+      </div>
+      <div class="hero-right r d2">
+        <div class="hero-card">
+          <div class="hero-card-head">
+            <p>What we handle for you</p>
+            <h3>Everything digital, sorted.</h3>
+          </div>
+          <div class="hc-list">
+            <div class="hc-row"><div class="hc-info"><strong>Professional Website</strong><span>Mobile-first, fast, built to convert</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
+            <div class="hc-row"><div class="hc-info"><strong>.ie Domain & Hosting</strong><span>Registered via IEDR, fully managed</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
+            <div class="hc-row"><div class="hc-info"><strong>Business Email</strong><span>yourname@yourbusiness.ie from day one</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
+            <div class="hc-row"><div class="hc-info"><strong>Google My Business</strong><span>Found locally from day one</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
+            <div class="hc-row"><div class="hc-info"><strong>Logo & Branding</strong><span>Look established immediately</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
+            <div class="hc-row"><div class="hc-info"><strong>SEO Foundation</strong><span>Start ranking from launch</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-inner">
+      <span class="mi">Square one is done</span><span class="mi">Now let's move</span><span class="mi">Irish-owned</span><span class="mi">Live in 7 days</span><span class="mi">From €249</span><span class="mi">No contracts</span><span class="mi">.ie domains</span><span class="mi">All 32 counties</span><span class="mi">Square one is done</span><span class="mi">Now let's move</span><span class="mi">Irish-owned</span><span class="mi">Live in 7 days</span><span class="mi">From €249</span><span class="mi">No contracts</span><span class="mi">.ie domains</span><span class="mi">All 32 counties</span>
+    </div>
+  </div>
+</section>
+
+<section class="statement" id="about">
+  <div class="wrap">
+    <div class="statement-inner">
+      <div class="statement-left r">
+        <div class="statement-num">2</div>
+        <h2>Square one was<br>having the idea.<br><em>We're square two.</em></h2>
+      </div>
+      <div class="statement-right">
+        <p class="r d1">Starting a business in Ireland takes real courage. You've thought it through, taken the risk, filed the paperwork, and made it official. <strong>That's the hard part — and you've already done it.</strong></p>
+        <p class="r d2">Square Two exists for exactly this moment. We're a small, Irish-owned team that works with newly incorporated businesses right across the country — from Donegal to Cork, Dublin to Galway. We don't care whether you're a sole trader or a limited company, whether you have a clear vision or are still figuring it out.</p>
+        <p class="r d3">What we care about is getting your business visible online, quickly and professionally, so you can start doing what you actually incorporated to do. No jargon, no lengthy back-and-forth, no waiting weeks for something that should take days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="label r">Services</div><h2 class="sh r d1">Everything digital,<br><em>handled for you.</em></h2></div>
+      <p class="r d2">You focus on the business. We handle every bit of the digital setup — from your first website to your Google presence. Available individually or as part of a package.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc r"><div class="svc-n">01</div><div class="svc-t">Launch Website</div><p class="svc-d">Clean, fast, mobile-first. Built to convert visitors into enquiries and make your business look credible from the moment you go live.</p></div>
+      <div class="svc r d1"><div class="svc-n">02</div><div class="svc-t">.ie Domain & Hosting</div><p class="svc-d">We register your .ie domain through IEDR and set up reliable Irish hosting. Your brand secured, with business email addresses to match.</p></div>
+      <div class="svc r d2"><div class="svc-n">03</div><div class="svc-t">Logo & Brand Identity</div><p class="svc-d">Already have a logo? We'll work with it and build your brand around it. Starting fresh? We'll create a professional identity from scratch — colour palette, typography, and all. Your call.</p></div>
+      <div class="svc r"><div class="svc-n">04</div><div class="svc-t">Google My Business</div><p class="svc-d">We set up and optimise your Google Business Profile so customers across Ireland can find you immediately on Maps, Search, and beyond.</p></div>
+      <div class="svc r d1"><div class="svc-n">05</div><div class="svc-t">Business Email</div><p class="svc-d">yourname@yourbusiness.ie from day one. Looks the part, builds trust, and costs nothing extra on our starter package.</p></div>
+      <div class="svc r d2"><div class="svc-n">06</div><div class="svc-t">Ongoing Support</div><p class="svc-d">We're your digital partner for the long term — not just the launch. Monthly support, updates, and maintenance as your business grows.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="proc-head">
+      <div><div class="label r">How It Works</div><h2 class="sh r d1">From incorporated<br>to <em>live</em> in 4 steps.</h2></div>
+      <p class="r d2">No back-and-forth, no lengthy briefs, no delays. A clear, friendly process that gets your business online as quickly as possible — wherever in Ireland you are.</p>
+    </div>
+    <div class="steps">
+      <div class="step r"><div class="step-n">01</div><h3>Get in Touch</h3><p>Tell us about your new business — a quick call or message is all it takes. We work with businesses right across Ireland.</p></div>
+      <div class="step r d1"><div class="step-n">02</div><h3>We Scope It</h3><p>We agree exactly what you need — no upselling, no unnecessary extras. Just what's right for where you are right now.</p></div>
+      <div class="step r d2"><div class="step-n">03</div><h3>We Build It</h3><p>Your site, domain, and digital presence built and ready for your review. Most clients are live within 7 working days.</p></div>
+      <div class="step r d3"><div class="step-n">04</div><h3>You Launch</h3><p>Go live with confidence. We handle every technical detail — you focus on building the business you started.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <div><div class="label r">Pricing</div><h2 class="sh r d1">Honest pricing.<br><em>No surprises.</em></h2></div>
+      <p class="r d2">Transparent pricing built for new businesses. No hidden fees, no lengthy contracts, no pressure. Pay for what you need — nothing more.</p>
+    </div>
+    <div class="plans">
+      <div class="plan r">
+        <div class="plan-tier">Starter</div>
+        <div class="plan-monthly">€49</div>
+        <div class="plan-monthly-label">per month</div>
+        <div class="plan-onceof">+ €249 once-off setup</div>
+        <div class="plan-rule"></div>
+        <ul class="plan-feats"><li>5-page professional website</li><li>.ie domain registration</li><li>Business email setup</li><li>Mobile optimised</li><li>Google My Business setup</li><li>Hands-on support for first 3 months</li></ul>
+        <a href="#contact" class="plan-cta">Get Started</a>
+      </div>
+      <div class="plan best r d1">
+        <div class="plan-badge">Most Popular</div>
+        <div class="plan-tier">Growth</div>
+        <div class="plan-monthly">€79</div>
+        <div class="plan-monthly-label">per month</div>
+        <div class="plan-onceof">+ €499 once-off setup</div>
+        <div class="plan-rule"></div>
+        <ul class="plan-feats"><li>10-page website with CMS</li><li>.ie domain & hosting</li><li>Logo & brand identity</li><li>SEO foundation package</li><li>Google My Business + Maps</li><li>Contact forms & booking</li><li>Hands-on support for first 6 months</li></ul>
+        <a href="#contact" class="plan-cta">Get Started</a>
+      </div>
+      <div class="plan r d2">
+        <div class="plan-tier">Custom</div>
+        <div class="plan-monthly" style="font-size:2.2rem;padding-top:.3rem">Bespoke</div>
+        <div class="plan-monthly-label">monthly retainer</div>
+        <div class="plan-onceof">Setup fee scoped to your needs</div>
+        <div class="plan-rule"></div>
+        <ul class="plan-feats"><li>E-commerce & booking systems</li><li>Custom web applications</li><li>Full brand strategy</li><li>Social media setup</li><li>Ongoing SEO & content</li><li>Dedicated account manager</li></ul>
+        <a href="#contact" class="plan-cta">Talk to Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-inner">
+      <div class="faq-left">
+        <div class="label r">FAQ</div>
+        <h2 class="sh r d1">Common<br><em>questions.</em></h2>
+        <p class="r d2">Something we haven't answered? Email us at hello@squaretwo.ie and we'll come back to you the same day.</p>
+      </div>
+      <div class="faq-list r d1">
+        <div class="faq-item"><button class="faq-q">Do I need to have content ready before we start? <span class="faq-ic">+</span></button><div class="faq-a">Not at all. Most of our clients are brand new businesses with no content prepared — that's completely normal. We'll work with you to develop what your site needs to say as part of the build process.</div></div>
+        <div class="faq-item"><button class="faq-q">Who owns the website once it's built? <span class="faq-ic">+</span></button><div class="faq-a">You do, outright. The site, domain, and all content are yours once the build fee is paid. The monthly retainer covers hosting and ongoing support — it's not a licence fee. If you ever want to move on, we'll help you do it cleanly.</div></div>
+        <div class="faq-item"><button class="faq-q">Do you work with businesses all across Ireland? <span class="faq-ic">+</span></button><div class="faq-a">Yes — every county. Everything is handled remotely so location is never a barrier. We've worked with businesses from Donegal to Kerry and everywhere in between. A call and a few emails is all it takes to get started.</div></div>
+        <div class="faq-item"><button class="faq-q">How does the 7-day turnaround work? <span class="faq-ic">+</span></button><div class="faq-a">Once we've agreed scope and you've given us the basics — business name, what you do, contact details, and any branding preferences — we build and present the site within 7 working days. Simpler builds often come in faster.</div></div>
+        <div class="faq-item"><button class="faq-q">Can I cancel the monthly retainer? <span class="faq-ic">+</span></button><div class="faq-a">Yes, with one month's notice. No long-term contracts. If you cancel, your site and domain are yours and we'll help you move to another host if needed.</div></div>
+        <div class="faq-item"><button class="faq-q">What if I want changes after the site launches? <span class="faq-ic">+</span></button><div class="faq-a">Small updates — text changes, new contact details, updated hours — are included in the retainer. For larger additions like new pages or features, we'll quote a simple once-off fee.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="contact-left">
+        <div class="label r">Get in Touch</div>
+        <h2 class="r d1">Square One is done.<br><em>Let's do Square Two.</em></h2>
+        <p class="r d2">Drop us a message and we'll get back to you the same day. No hard sell, no jargon — just a friendly conversation about what your business needs next.</p>
+        <div class="contact-deets r d3">
+          <div class="cd"><div class="cd-ic">✉️</div><span>hello@squaretwo.ie</span></div>
+          <div class="cd"><div class="cd-ic">🌐</div><span><a href="#">squaretwo.ie</a></span></div>
+          <div class="cd"><div class="cd-ic">🇮🇪</div><span>Serving all of Ireland</span></div>
+        </div>
+      </div>
+      <div class="contact-form r d1">
+        <div class="form-row">
+          <div class="fg" style="margin-bottom:0"><label>First Name</label><input type="text" placeholder="Seán"></div>
+          <div class="fg" style="margin-bottom:0"><label>Last Name</label><input type="text" placeholder="Murphy"></div>
+        </div>
+        <div class="fg"><label>Company Name</label><input type="text" placeholder="Murphy Electrical Ltd"></div>
+        <div class="fg"><label>Email Address</label><input type="email" placeholder="sean@murphyelectrical.ie"></div>
+        <div class="fg"><label>County</label>
+          <select><option value="" disabled selected>Select your county</option><option>Antrim</option><option>Armagh</option><option>Carlow</option><option>Cavan</option><option>Clare</option><option>Cork</option><option>Derry</option><option>Donegal</option><option>Down</option><option>Dublin</option><option>Fermanagh</option><option>Galway</option><option>Kerry</option><option>Kildare</option><option>Kilkenny</option><option>Laois</option><option>Leitrim</option><option>Limerick</option><option>Longford</option><option>Louth</option><option>Mayo</option><option>Meath</option><option>Monaghan</option><option>Offaly</option><option>Roscommon</option><option>Sligo</option><option>Tipperary</option><option>Tyrone</option><option>Waterford</option><option>Westmeath</option><option>Wexford</option><option>Wicklow</option></select>
+        </div>
+        <div class="fg"><label>What do you need?</label>
+          <select><option value="" disabled selected>Select a package</option><option>Starter — €249</option><option>Growth — €499</option><option>Custom / Not sure yet</option></select>
+        </div>
+        <div class="fg" style="margin-bottom:1.4rem"><label>Tell us about your business</label><textarea placeholder="What does your business do? Anything else we should know?"></textarea></div>
+        <button class="btn-sub">Send Enquiry →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-top">
+      <div>
+        <a href="#" class="ft-logo">Square<b> Two</b></a>
+        <p class="ft-tag">The next step for new Irish businesses. Square one is done — we handle everything that comes next.</p>
+      </div>
+      <div class="ft-col"><h4>Services</h4><ul><li><a href="#services">Launch Websites</a></li><li><a href="#services">.ie Domains</a></li><li><a href="#services">Logo & Branding</a></li><li><a href="#services">Google My Business</a></li><li><a href="#services">SEO</a></li></ul></div>
+      <div class="ft-col"><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+      <div class="ft-col"><h4>Contact</h4><ul><li>hello@squaretwo.ie</li><li><a href="#">squaretwo.ie</a></li><li><a href="#">Ireland</a></li></ul></div>
+    </div>
+    <div class="ft-bot">
+      <p>© 2026 Square Two Digital Ltd. All rights reserved.</p>
+      <span>Registered in Ireland · squaretwo.ie</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+var obs=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('v');obs.unobserve(x.target)}})},{threshold:0.08});
+document.querySelectorAll('.r').forEach(function(el){obs.observe(el)});
+window.addEventListener('scroll',function(){document.querySelector('nav').style.boxShadow=window.scrollY>8?'0 1px 20px rgba(0,0,0,.06)':'none'});
+document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){var i=b.closest('.faq-item'),o=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(function(x){x.classList.remove('open')});if(!o)i.classList.add('open')})});
+</script>
+</body>
+</html>
