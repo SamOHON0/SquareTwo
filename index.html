@@ -146,6 +146,36 @@ h1 em{font-style:italic;color:var(--blue)}
 .faq-a{display:none;padding:0 1.6rem 1.3rem;font-size:.855rem;color:var(--mid);line-height:1.75;font-weight:300}
 .faq-item.open .faq-a{display:block}
 
+/* BESPOKE */
+.bespoke{padding:7rem 0;background:var(--ink)}
+.bespoke .label::before{background:rgba(255,255,255,.4)}
+.bespoke .label{color:rgba(255,255,255,.5)}
+.bespoke .sh{color:#fff}
+.bespoke .sh em{color:var(--blue)}
+.bespoke .sec-head p{color:rgba(255,255,255,.45)}
+.bsp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.bsp-card{border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:2.4rem;position:relative;background:rgba(255,255,255,.03);transition:background .25s,border-color .25s}
+.bsp-card:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.14)}
+.bsp-card.featured{border-color:var(--blue);background:rgba(0,82,255,.08)}
+.bsp-card.featured:hover{background:rgba(0,82,255,.13)}
+.bsp-badge{position:absolute;top:-1px;right:1.8rem;background:var(--blue);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .8rem;border-radius:0 0 4px 4px}
+.bsp-tier{font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:1.1rem}
+.bsp-price{font-family:'Fraunces',serif;font-weight:300;font-size:2.8rem;color:#fff;line-height:1;letter-spacing:-.02em;margin-bottom:.2rem}
+.bsp-price-label{font-size:.75rem;color:rgba(255,255,255,.35);font-weight:400;margin-bottom:.5rem}
+.bsp-from{font-size:.8rem;color:rgba(255,255,255,.3);font-weight:300;margin-bottom:2rem;padding:.5rem .75rem;background:rgba(255,255,255,.05);border-radius:3px;display:inline-block}
+.bsp-rule{height:1px;background:rgba(255,255,255,.08);margin-bottom:1.5rem}
+.bsp-feats{list-style:none;display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem}
+.bsp-feats li{display:flex;align-items:flex-start;gap:.65rem;font-size:.855rem;color:rgba(255,255,255,.5);font-weight:300;line-height:1.4}
+.bsp-feats li::before{content:'→';font-size:.65rem;font-weight:700;color:var(--blue);flex-shrink:0;margin-top:.15rem}
+.bsp-cta{display:block;text-align:center;padding:.85rem;border-radius:3px;font-size:.875rem;font-weight:500;text-decoration:none;border:1.5px solid rgba(255,255,255,.15);color:rgba(255,255,255,.6);transition:all .2s;font-family:'DM Sans',sans-serif}
+.bsp-cta:hover{border-color:var(--blue);color:#fff;background:var(--blue)}
+.bsp-card.featured .bsp-cta{border-color:var(--blue);color:var(--blue);background:rgba(0,82,255,.1)}
+.bsp-card.featured .bsp-cta:hover{background:var(--blue);color:#fff}
+.bsp-note{margin-top:3rem;padding:2rem 2.4rem;border:1px solid rgba(255,255,255,.07);border-radius:6px;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
+.bsp-note p{font-size:.9rem;color:rgba(255,255,255,.4);line-height:1.75;font-weight:300}
+.bsp-note p strong{color:rgba(255,255,255,.7);font-weight:500}
+.bsp-note a.btn-blue{white-space:nowrap;font-size:.875rem}
+
 /* CONTACT */
 .contact{padding:7rem 0;background:var(--white)}
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start}
@@ -198,6 +228,8 @@ footer{background:var(--ink);padding:4rem 0 2rem}
   .svc-grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
   .plans{grid-template-columns:1fr;max-width:380px}
+  .bsp-grid{grid-template-columns:1fr;max-width:380px}
+  .bsp-note{grid-template-columns:1fr;gap:1rem}
   .faq-inner{grid-template-columns:1fr;gap:2.5rem}
   .faq-left{position:static}
   .ft-top{grid-template-columns:1fr 1fr;gap:2rem}
@@ -219,6 +251,7 @@ footer{background:var(--ink);padding:4rem 0 2rem}
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#platforms">Platforms</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact" class="nav-btn">Get Started</a></li>
     </ul>
@@ -246,7 +279,7 @@ footer{background:var(--ink);padding:4rem 0 2rem}
           <div class="hc-list">
             <div class="hc-row"><div class="hc-info"><strong>Professional Website</strong><span>Mobile-first, fast, built to convert</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
             <div class="hc-row"><div class="hc-info"><strong>.ie Domain & Hosting</strong><span>Registered via IEDR, fully managed</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
-            <div class="hc-row"><div class="hc-info"><strong>Business Email</strong><span>hello@yourname.ie from day one</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
+            <div class="hc-row"><div class="hc-info"><strong>Business Email</strong><span>you@yourbusiness.ie from day one</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
             <div class="hc-row"><div class="hc-info"><strong>Google My Business</strong><span>Found locally from day one</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
             <div class="hc-row"><div class="hc-info"><strong>Logo & Branding</strong><span>Look established immediately</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
             <div class="hc-row"><div class="hc-info"><strong>SEO Foundation</strong><span>Start ranking from launch</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
@@ -289,7 +322,7 @@ footer{background:var(--ink);padding:4rem 0 2rem}
       <div class="svc r d1"><div class="svc-n">02</div><div class="svc-t">.ie Domain & Hosting</div><p class="svc-d">We register your .ie domain through IEDR and set up reliable Irish hosting. Your brand secured, with business email addresses to match.</p></div>
       <div class="svc r d2"><div class="svc-n">03</div><div class="svc-t">Logo & Brand Identity</div><p class="svc-d">Already have a logo? We'll work with it and build your brand around it. Starting fresh? We'll create a professional identity from scratch - colour palette, typography, and all. Your call.</p></div>
       <div class="svc r"><div class="svc-n">04</div><div class="svc-t">Google My Business</div><p class="svc-d">We set up and optimise your Google Business Profile so customers across Ireland can find you immediately on Maps, Search, and beyond.</p></div>
-      <div class="svc r d1"><div class="svc-n">05</div><div class="svc-t">Business Email</div><p class="svc-d">hello@squaretwo.ie from day one. Looks the part, builds trust, and costs nothing extra on our starter package.</p></div>
+      <div class="svc r d1"><div class="svc-n">05</div><div class="svc-t">Business Email</div><p class="svc-d">you@yourbusiness.ie from day one. Looks the part, builds trust, and costs nothing extra on our starter package.</p></div>
       <div class="svc r d2"><div class="svc-n">06</div><div class="svc-t">Ongoing Support</div><p class="svc-d">We're your digital partner for the long term - not just the launch. Monthly support, updates, and maintenance as your business grows.</p></div>
     </div>
   </div>
@@ -345,6 +378,37 @@ footer{background:var(--ink);padding:4rem 0 2rem}
         <ul class="plan-feats"><li>E-commerce & booking systems</li><li>Custom web applications</li><li>Full brand strategy</li><li>Social media setup</li><li>Ongoing SEO & content</li><li>Dedicated account manager</li></ul>
         <a href="#contact" class="plan-cta">Talk to Us</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="bespoke" id="platforms">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0">
+      <div><div class="label r">Platforms & Web Apps</div><h2 class="sh r d1">Need something<br><em>built from scratch?</em></h2></div>
+      <p class="r d2">Beyond standard websites, we build bespoke digital platforms and web applications. Booking systems, client portals, tools, SaaS products - scoped and priced to your requirements.</p>
+    </div>
+    <div class="bsp-grid" style="grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto">
+      <div class="bsp-card featured r">
+        <div class="bsp-tier">Platforms & Web Apps</div>
+        <div class="bsp-price">Bespoke</div>
+        <div class="bsp-price-label">scoped to your requirements</div>
+        <div class="bsp-from">Build fee + monthly retainer — quoted per project</div>
+        <div class="bsp-rule"></div>
+        <ul class="bsp-feats">
+          <li>Booking systems & client portals</li>
+          <li>Custom web applications & tools</li>
+          <li>Admin dashboards & data management</li>
+          <li>Payment integration & automated workflows</li>
+          <li>API integrations with third-party services</li>
+          <li>Ongoing hosting, support & maintenance</li>
+        </ul>
+        <a href="#contact" class="bsp-cta">Tell Us What You Need</a>
+      </div>
+    </div>
+    <div class="bsp-note r">
+      <p><strong>Every platform project starts with a scoping call.</strong> We agree exactly what you need, how long it will take, and what it will cost - before any work begins. No ambiguity, no surprise invoices. Build fees are fixed; retainer covers hosting, updates, and ongoing support.</p>
+      <a href="#contact" class="btn btn-blue">Book a Scoping Call →</a>
     </div>
   </div>
 </section>
@@ -410,25 +474,30 @@ footer{background:var(--ink);padding:4rem 0 2rem}
         <p class="ft-tag">The digital partner for Irish businesses - new or established. We build, improve, and grow your online presence.</p>
       </div>
       <div class="ft-col"><h4>Services</h4><ul><li><a href="#services">Launch Websites</a></li><li><a href="#services">.ie Domains</a></li><li><a href="#services">Logo & Branding</a></li><li><a href="#services">Google My Business</a></li><li><a href="#services">SEO</a></li></ul></div>
-      <div class="ft-col"><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
-      <div class="ft-col"><h4>Contact</h4><ul><li><a href="mailto:hello@squaretwo.ie">hello@squaretwo.ie</a></li><li><a href="#">squaretwo.ie</a></li><li><a href="#">Ireland</a></li></ul></div>
+      <div class="ft-col"><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#platforms">Platforms</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
+      <div class="ft-col"><h4>Contact</h4><ul><li><a href="mailto:hello@squaretwo.ie">hello@squaretwo.ie</a></li><li><a href="#">squaretwo.ie</a></li><li><a href="#">Dublin, Ireland</a></li></ul></div>
     </div>
     <div class="ft-bot">
-      <p>© 2026 Square Two Digital Ltd. All rights reserved.</p>
-      <span>Registered in Ireland · squaretwo.ie</span>
+      <p>© 2025 Square Two Digital Ltd. All rights reserved.</p>
+      <span>Built in Ireland</span>
     </div>
   </div>
 </footer>
+
 <script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('v'); observer.unobserve(e.target); } });
+}, { threshold: 0.08 });
+document.querySelectorAll('.r').forEach(el => observer.observe(el));
+
 document.querySelectorAll('.faq-q').forEach(btn => {
   btn.addEventListener('click', () => {
-    btn.closest('.faq-item').classList.toggle('open');
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
   });
 });
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('v'); });
-}, {threshold: 0.1});
-document.querySelectorAll('.r').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
