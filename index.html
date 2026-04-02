@@ -558,6 +558,17 @@ footer{background:var(--ink);padding:4rem 0 2rem}
   </div>
 </section>
 
+<script>
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=this.closest('.faq-item');
+    var isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open')});
+    if(!isOpen) item.classList.add('open');
+  });
+});
+</script>
+
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="contact-inner">
@@ -599,14 +610,4 @@ footer{background:var(--ink);padding:4rem 0 2rem}
         <p class="ft-tag">The digital partner for Irish businesses - new or established. We build, improve, and grow your online presence.</p>
       </div>
       <div class="ft-col"><h4>Services</h4><ul><li><a href="#services">Launch Websites</a></li><li><a href="#services">.ie Domains</a></li><li><a href="#services">Logo & Branding</a></li><li><a href="#services">Google My Business</a></li><li><a href="#services">SEO</a></li></ul></div>
-      <div class="ft-col"><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#platforms">Platforms</a></li><li><a href="#faq">FAQ</a></li><li><a href="#">Privacy Policy</a></li></ul></div>
-      <div class="ft-col"><h4>Contact</h4><ul><li><a href="mailto:hello@squaretwo.ie">hello@squaretwo.ie</a></li><li><a href="#">squaretwo.ie</a></li><li><a href="#">Dublin, Ireland</a></li></ul></div>
-    </div>
-    <div class="ft-bot">
-      <p>© 2025–2026 Square Two Digital Ltd. All rights reserved.</p>
-      <span>Built in Ireland</span>
-    </div>
-  </div>
-</footer>
-</body>
-</html>
+      <div class="ft-col"><h4>Company</h4><ul><li><a href="#about">About</a></li><li><a href="#pricing">Pricing</a></li><li><a 
