@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Square Two – Web Design Tips for Irish Small Businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="description" content="Practical web design and online presence advice for Irish small businesses. Written by the Square Two team.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://squaretwo.ie/blog/">
+<meta property="og:title" content="Blog | Square Two">
+<meta property="og:description" content="Practical web design and online presence advice for Irish small businesses.">
+<meta property="og:url" content="https://squaretwo.ie/blog/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Square Two">
+<meta property="og:image" content="https://squaretwo.ie/og-image.jpg">
+<meta property="og:locale" content="en_IE">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#0052FF;--blue-dk:#003ECC;--blue-lt:#EBF1FF;--ink:#080D1A;--mid:#4A5468;--soft:#9BA5BB;--white:#FFFFFF;--off:#F4F6FB;--border:#E2E7F0}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:72px;background:rgba(255,255,255,.97);border-bottom:1px solid var(--border);box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.nav-i{max-width:1120px;margin:0 auto;padding:0 2.5rem;height:100%;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Fraunces',serif;font-weight:600;font-size:1.1rem;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
+.logo b{color:var(--blue)}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{text-decoration:none;font-size:.875rem;color:var(--mid);transition:color .2s;font-weight:400}
+.nav-links a:hover{color:var(--ink)}
+.nav-btn{background:var(--blue);color:#fff!important;padding:.5rem 1.2rem;border-radius:3px;font-weight:500!important}
+.nav-btn:hover{background:var(--blue-dk)!important}
+
+/* Page wrap */
+.page-wrap{max-width:1120px;margin:0 auto;padding:108px 2.5rem 80px}
+
+/* Header */
+.blog-header{max-width:640px;margin-bottom:3.5rem}
+.blog-label{display:inline-flex;align-items:center;gap:.4rem;font-size:.68rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:var(--blue-lt);padding:.3rem .8rem;border-radius:100px;margin-bottom:1rem}
+.blog-label::before{content:'';width:5px;height:5px;background:var(--blue);border-radius:50%}
+.blog-header h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(2rem,4vw,2.8rem);line-height:1.1;letter-spacing:-.03em;color:var(--ink);margin-bottom:.75rem}
+.blog-header h1 em{font-style:italic;color:var(--blue)}
+.blog-header p{font-size:.975rem;color:var(--mid);line-height:1.75;font-weight:300}
+
+/* Grid */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+
+/* Card */
+.card{border:1px solid var(--border);border-radius:6px;padding:1.75rem;display:flex;flex-direction:column;transition:box-shadow .2s,border-color .2s;text-decoration:none}
+.card:hover{box-shadow:0 4px 20px rgba(0,0,0,.07);border-color:#c9d4e8;text-decoration:none}
+.card-tag{display:inline-flex;align-items:center;gap:.35rem;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
+.card-tag::before{content:'';width:4px;height:4px;background:var(--blue);border-radius:50%}
+.card h2{font-family:'Fraunces',serif;font-weight:300;font-size:1.2rem;line-height:1.25;letter-spacing:-.02em;color:var(--ink);margin-bottom:.75rem}
+.card h2 em{font-style:italic;color:var(--blue)}
+.card p{font-size:.875rem;color:var(--mid);line-height:1.7;font-weight:300;flex:1;margin-bottom:1.25rem}
+.card-meta{font-size:.75rem;color:var(--soft);display:flex;gap:1rem;margin-bottom:1.25rem}
+.card-link{font-size:.82rem;font-weight:500;color:var(--blue);display:inline-flex;align-items:center;gap:.3rem;text-decoration:none}
+.card-link::after{content:'→';transition:transform .2s}
+.card:hover .card-link::after{transform:translateX(3px)}
+
+/* CTA strip */
+.blog-cta{background:var(--blue);border-radius:6px;padding:2.5rem;margin-top:3.5rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.blog-cta-text h3{font-family:'Fraunces',serif;font-weight:300;font-size:1.5rem;color:#fff;letter-spacing:-.02em;margin-bottom:.4rem}
+.blog-cta-text p{font-size:.9rem;color:rgba(255,255,255,.7);font-weight:300}
+.btn-white{display:inline-block;background:#fff;color:var(--blue);padding:.75rem 1.8rem;border-radius:3px;font-size:.875rem;font-weight:500;text-decoration:none;white-space:nowrap;transition:background .2s}
+.btn-white:hover{background:var(--off);text-decoration:none}
+
+footer{border-top:1px solid var(--border);padding:2rem 0 3rem;margin-top:5rem}
+.ft-inner{max-width:1120px;margin:0 auto;padding:0 2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.ft-logo{font-family:'Fraunces',serif;font-weight:600;font-size:.95rem;color:var(--ink);text-decoration:none}
+.ft-logo b{color:var(--blue)}
+.ft-links{list-style:none;display:flex;gap:1.5rem;flex-wrap:wrap}
+.ft-links a{font-size:.78rem;color:var(--soft);text-decoration:none;transition:color .2s}
+.ft-links a:hover{color:var(--ink)}
+.ft-copy{font-size:.75rem;color:var(--soft)}
+
+@media(max-width:900px){.blog-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .nav-links{display:none}
+  .page-wrap{padding:90px 1.25rem 60px}
+  .blog-grid{grid-template-columns:1fr}
+  .blog-cta{flex-direction:column;align-items:flex-start;padding:1.8rem 1.25rem}
+  .ft-inner{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-i">
+    <a href="/" class="logo">Square <b>Two</b></a>
+    <ul class="nav-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact" class="nav-btn">Get Started</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="blog-header">
+    <div class="blog-label">Resources</div>
+    <h1>Practical advice for Irish <em>small businesses</em></h1>
+    <p>No fluff. Just useful guidance on getting your business online, found on Google, and converting visitors into customers.</p>
+  </div>
+
+  <div class="blog-grid">
+
+    <a href="/blog/does-a-tradesperson-need-a-website-ireland/" class="card">
+      <div class="card-tag">Trades & Local Business</div>
+      <h2>Does a Tradesperson Need a Website in Ireland? <em>(Honest Answer)</em></h2>
+      <p>Most Irish homeowners Google a trade before they call. If you are not showing up, you are losing work you never knew was available.</p>
+      <div class="card-meta">
+        <span>April 2026</span>
+        <span>6 min read</span>
+      </div>
+      <span class="card-link">Read article</span>
+    </a>
+
+    <a href="/blog/how-to-get-ie-domain-name-ireland/" class="card">
+      <div class="card-tag">Domains & Web Presence</div>
+      <h2>How to Get a <em>.ie Domain Name</em> in Ireland</h2>
+      <p>A .ie domain builds instant trust with Irish customers. Here is exactly how to register one, what it costs, and what to watch out for.</p>
+      <div class="card-meta">
+        <span>April 2026</span>
+        <span>5 min read</span>
+      </div>
+      <span class="card-link">Read article</span>
+    </a>
+
+    <a href="/blog/what-to-do-after-registering-a-business-in-ireland/" class="card">
+      <div class="card-tag">Business Setup</div>
+      <h2>What to Do After <em>Registering a Business</em> in Ireland</h2>
+      <p>You have registered with the CRO. Now what? The practical next steps most new Irish business owners miss in the first few weeks.</p>
+      <div class="card-meta">
+        <span>April 2026</span>
+        <span>7 min read</span>
+      </div>
+      <span class="card-link">Read article</span>
+    </a>
+
+  </div>
+
+  <div class="blog-cta">
+    <div class="blog-cta-text">
+      <h3>Ready to get your business online?</h3>
+      <p>Professional website, .ie domain, business email, and Google Business setup. From €249.</p>
+    </div>
+    <a href="/#pricing" class="btn-white">See our packages</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="ft-inner">
+    <a href="/" class="ft-logo">Square <b>Two</b></a>
+    <ul class="ft-links">
+      <li><a href="/#services">Services</a></li>
+      <li><a href="/#pricing">Pricing</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <p class="ft-copy">© 2026 Square Two Digital Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
