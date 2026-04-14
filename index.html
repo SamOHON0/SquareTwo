@@ -146,6 +146,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:100px;background:#fff
 .nav-links a:hover{color:var(--ink)}
 .nav-btn{background:var(--blue);color:#fff!important;padding:.55rem 1.4rem;border-radius:3px;font-weight:500!important;transition:background .2s}
 .nav-btn:hover{background:var(--blue-dk)!important}
+.nav-call{color:var(--ink)!important;font-size:.825rem;font-weight:500!important;white-space:nowrap}
+.nav-call:hover{color:var(--blue)!important}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:999;display:flex;align-items:center;justify-content:center;width:58px;height:58px;border-radius:50%;background:#25D366;box-shadow:0 4px 20px rgba(37,211,102,.4);text-decoration:none;transition:transform .2s,box-shadow .2s}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.55)}
+.wa-float::before{content:'';position:absolute;width:58px;height:58px;border-radius:50%;border:2px solid #25D366;animation:wa-pulse 2s ease-out infinite;opacity:.6}
+@keyframes wa-pulse{0%{transform:scale(1);opacity:.6}70%{transform:scale(1.55);opacity:0}100%{transform:scale(1.55);opacity:0}}
+.wa-tooltip{position:absolute;right:70px;background:var(--ink);color:#fff;font-size:.75rem;font-weight:500;padding:.35rem .75rem;border-radius:4px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.wa-float:hover .wa-tooltip{opacity:1}
+@media(max-width:768px){.nav-call{display:none}}
 
 /* HERO */
 .hero{padding:104px 0 0;overflow:hidden;background:var(--white)}
@@ -377,6 +388,7 @@ footer{background:var(--ink);padding:4rem 0 2rem}
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#platforms">Platforms</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="tel:+353851444975" class="nav-call">📞 085 144 4975</a></li>
       <li><a href="#contact" class="nav-btn">Get Started</a></li>
     </ul>
   </div>
@@ -404,7 +416,7 @@ footer{background:var(--ink);padding:4rem 0 2rem}
           <div class="hc-list">
             <div class="hc-row"><div class="hc-info"><strong>Professional Website</strong><span>Mobile-first, fast, built to convert</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
             <div class="hc-row"><div class="hc-info"><strong>.ie Domain & Hosting</strong><span>Registered via IEDR, fully managed</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
-            <div class="hc-row"><div class="hc-info"><strong>Business Email</strong><span><!--email_off-->you@yourbusiness.ie<!--/email_off--> from day one</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
+            <div class="hc-row"><div class="hc-info"><strong>Business Email</strong><span>you@yourbusiness.ie from day one</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
             <div class="hc-row"><div class="hc-info"><strong>Google My Business</strong><span>Found locally from day one</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
             <div class="hc-row"><div class="hc-info"><strong>Logo & Branding</strong><span>Look established immediately</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
             <div class="hc-row"><div class="hc-info"><strong>SEO Foundation</strong><span>Start ranking from launch</span></div><div class="hc-tick"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div></div>
@@ -447,7 +459,7 @@ footer{background:var(--ink);padding:4rem 0 2rem}
       <div class="svc r d1"><div class="svc-n">02</div><div class="svc-t">.ie Domain & Hosting</div><p class="svc-d">We register your .ie domain through IEDR and set up reliable Irish hosting. Your brand secured, with business email addresses to match.</p></div>
       <div class="svc r d2"><div class="svc-n">03</div><div class="svc-t">Logo & Brand Identity</div><p class="svc-d">Already have a logo? We'll work with it and build your brand around it. Starting fresh? We'll create a professional identity from scratch - colour palette, typography, and all. Your call.</p></div>
       <div class="svc r"><div class="svc-n">04</div><div class="svc-t">Google My Business</div><p class="svc-d">We set up and optimise your Google Business Profile so customers across Ireland can find you immediately on Maps, Search, and beyond.</p></div>
-      <div class="svc r d1"><div class="svc-n">05</div><div class="svc-t">Business Email</div><p class="svc-d"><!--email_off-->you@yourbusiness.ie<!--/email_off--> from day one. Looks the part, builds trust, and costs nothing extra on our starter package.</p></div>
+      <div class="svc r d1"><div class="svc-n">05</div><div class="svc-t">Business Email</div><p class="svc-d">you@yourbusiness.ie from day one. Looks the part, builds trust, and costs nothing extra on our starter package.</p></div>
       <div class="svc r d2"><div class="svc-n">06</div><div class="svc-t">Ongoing Support</div><p class="svc-d">We're your digital partner for the long term - not just the launch. Monthly support, updates, and maintenance as your business grows.</p></div>
     </div>
   </div>
@@ -544,7 +556,7 @@ footer{background:var(--ink);padding:4rem 0 2rem}
       <div class="faq-left">
         <div class="label r">FAQ</div>
         <h2 class="sh r d1">Common<br><em>questions.</em></h2>
-        <p class="r d2">Something we haven't answered? Email us at <a href="mailto:hello@squaretwo.ie"><!--email_off-->hello@squaretwo.ie<!--/email_off--></a> and we'll come back to you the same day.</p>
+        <p class="r d2">Something we haven't answered? Email us at <a href="/cdn-cgi/l/email-protection#5e363b3232311e2d2f2b3f2c3b2a293170373b">hello@squaretwo.ie</a> and we'll come back to you the same day.</p>
       </div>
       <div class="faq-list r d1">
         <div class="faq-item"><button class="faq-q">Do I need to have content ready before we start? <span class="faq-ic">+</span></button><div class="faq-a">Not at all. Whether you're brand new or overhauling an existing site, most clients come to us without content prepared - that's completely normal. We'll work with you to develop what your site needs to say as part of the process.</div></div>
@@ -558,7 +570,7 @@ footer{background:var(--ink);padding:4rem 0 2rem}
   </div>
 </section>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 document.querySelectorAll('.faq-q').forEach(function(btn){
   btn.addEventListener('click',function(){
     var item=this.closest('.faq-item');
@@ -577,7 +589,8 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
         <h2 class="r d1">Square One is done.<br><em>Let's do Square Two.</em></h2>
         <p class="r d2">Drop us a message and we'll get back to you the same day. No hard sell, no jargon - just a friendly conversation about what your business needs next.</p>
         <div class="contact-deets r d3">
-          <div class="cd"><div class="cd-ic">✉️</div><span><a href="mailto:hello@squaretwo.ie"><!--email_off-->hello@squaretwo.ie<!--/email_off--></a></span></div>
+          <div class="cd"><div class="cd-ic">📞</div><span><a href="tel:+353851444975">085 144 4975</a></span></div>
+          <div class="cd"><div class="cd-ic">✉️</div><span><a href="/cdn-cgi/l/email-protection#0169646d6d6e4172707460736475766e2f6864">hello@squaretwo.ie</a></span></div>
           <div class="cd"><div class="cd-ic">🌐</div><span><a href="#">squaretwo.ie</a></span></div>
           <div class="cd"><div class="cd-ic">🇮🇪</div><span>Serving all of Ireland</span></div>
         </div>
@@ -602,8 +615,11 @@ document.querySelectorAll('.faq-q').forEach(function(btn){
   </div>
 </section>
 
+<!-- ===== WHATSAPP FLOAT ===== -->
+<a href="https://wa.me/353851444975?text=Hi%20SquareTwo%21%20I%20found%20you%20online%20and%20I%27d%20like%20to%20chat%20about%20my%20website." target="_blank" rel="noopener" class="wa-float" aria-label="Chat with us on WhatsApp">
+  <div class="wa-tooltip">WhatsApp us</div>
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9.373 3 4 8.373 4 15c0 2.385.668 4.61 1.832 6.51L4 29l7.695-1.812A12.94 12.94 0 0 0 16 28c6.627 0 12-5.373 12-12S22.627 3 16 3zm0 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a10.01 10.01 0 0 1-5.01-1.344l-.36-.214-4.57 1.075 1.11-4.46-.23-.37A9.96 9.96 0 0 1 6 15c0-5.523 4.477-10 10-10zm-3.04 5.5c-.22 0-.577.082-.88.41-.3.327-1.15 1.124-1.15 2.74 0 1.615 1.178 3.176 1.342 3.396.163.22 2.286 3.638 5.62 4.957 2.785 1.099 3.35.88 3.952.825.602-.055 1.942-.794 2.216-1.56.274-.766.274-1.423.192-1.56-.082-.137-.302-.22-.63-.385-.328-.164-1.942-.957-2.242-1.066-.3-.11-.518-.165-.738.164-.22.328-.848 1.066-1.04 1.285-.19.22-.384.247-.713.083-.328-.165-1.387-.512-2.641-1.63-.976-.87-1.635-1.943-1.826-2.271-.19-.329-.02-.507.144-.67.148-.147.328-.384.492-.576.163-.192.218-.329.328-.55.11-.219.055-.41-.028-.576-.082-.164-.72-1.783-.997-2.44-.247-.602-.505-.52-.713-.53l-.602-.01z"/></svg>
+</a>
+
 <footer>
-  <div class="wrap">
-    <div class="ft-top">
-      <div>
-        <a
+  <div cla
